@@ -26,32 +26,45 @@ class CustomDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Drawer(
-      elevation: 0,
-      backgroundColor: const Color(0xffFFFFFF),
-      shape: const BeveledRectangleBorder(),
-      child: Column(
-        children: [
-          const SizedBox(
-            height: 20,
+    return Container(
+      decoration: const BoxDecoration(color: Color(0xffFFFFFF)),
+
+      // elevation: 0,
+      // backgroundColor: const Color(0xffFFFFFF),
+      // shape: const BeveledRectangleBorder(),
+      child: CustomScrollView(
+        slivers: [
+          const SliverToBoxAdapter(
+            child: SizedBox(
+              height: 20,
+            ),
           ),
-          UserInfo(),
-          const SizedBox(
-            height: 8,
+          SliverToBoxAdapter(child: UserInfo()),
+          const SliverToBoxAdapter(
+            child: SizedBox(
+              height: 8,
+            ),
           ),
           DrawerItemsList(items: drawerItems),
-          const Expanded(child: SizedBox()),
-          ListTileInActiveItem(
-              drawerItemModel: DrawerItemModel(
-                  image: SvgPicture.asset(Assets.imagesSettings),
-                  title: "Settings")),
-          ListTileInActiveItem(
-              drawerItemModel: DrawerItemModel(
-                  image: SvgPicture.asset(Assets.imagesLogout),
-                  title: "Logout")),
-          const SizedBox(
-            height: 48,
-          ),
+          SliverFillRemaining(
+            hasScrollBody: false,
+            child: Column(
+              children: [
+                const Expanded(child: SizedBox()),
+                ListTileInActiveItem(
+                    drawerItemModel: DrawerItemModel(
+                        image: SvgPicture.asset(Assets.imagesSettings),
+                        title: "Settings")),
+                ListTileInActiveItem(
+                    drawerItemModel: DrawerItemModel(
+                        image: SvgPicture.asset(Assets.imagesLogout),
+                        title: "Logout")),
+                const SizedBox(
+                  height: 48,
+                ),
+              ],
+            ),
+          )
         ],
       ),
     );

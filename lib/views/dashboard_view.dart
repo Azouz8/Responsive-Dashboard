@@ -10,7 +10,7 @@ class DashBoardView extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xfff7f9fa),
       drawerEnableOpenDragGesture: false,
-      drawer: const Drawer(),
+      // drawer: const Drawer(),
       appBar: MediaQuery.sizeOf(context).width < 996
           ? AppBar(
               iconTheme: const IconThemeData(color: Colors.white),
