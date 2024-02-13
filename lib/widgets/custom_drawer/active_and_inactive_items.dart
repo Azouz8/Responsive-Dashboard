@@ -12,14 +12,14 @@ class ListTileInActiveItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      leading: Padding(
-        padding: const EdgeInsets.only(left: 5),
-        child: drawerItemModel.image,
-      ),
-      title: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-        child: Text(
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: ListTile(
+        leading: Padding(
+          padding: const EdgeInsets.only(left: 5),
+          child: drawerItemModel.image,
+        ),
+        title: Text(
           drawerItemModel.title,
           style: AppStyles.styleMedium16,
         ),
