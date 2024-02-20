@@ -6,7 +6,7 @@ class FinancialCategory extends StatelessWidget {
   final FinancialItemModel financialItemModel;
   @override
   Widget build(BuildContext context) {
-    return Expanded(
+    return IntrinsicWidth(
       child: IntrinsicHeight(
         child: Container(
           margin: const EdgeInsets.all(8),
@@ -29,7 +29,9 @@ class FinancialCategory extends StatelessWidget {
                     ),
                     child: financialItemModel.icon,
                   ),
-                  const Spacer(),
+                  const SizedBox(
+                    width: 101,
+                  ),
                   Icon(
                     Icons.arrow_forward_ios,
                     size: MediaQuery.sizeOf(context).width / 60,

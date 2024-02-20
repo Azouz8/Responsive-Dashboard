@@ -9,11 +9,13 @@ class MiddlePart extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Padding(
       padding: EdgeInsets.only(left: 16),
-      child: Column(
-        children: [
-          AllExpenses(),
-          QuickInvoice(),
-        ],
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            AllExpenses(),
+            QuickInvoice(),
+          ],
+        ),
       ),
     );
   }

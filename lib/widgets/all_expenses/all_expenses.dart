@@ -21,12 +21,15 @@ class AllExpenses extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const ExpensesHeader(),
-          Row(
-            children: [
-              FinancialCategory(financialItemModel: items[0]),
-              FinancialCategory(financialItemModel: items[1]),
-              FinancialCategory(financialItemModel: items[2]),
-            ],
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                FinancialCategory(financialItemModel: items[0]),
+                FinancialCategory(financialItemModel: items[1]),
+                FinancialCategory(financialItemModel: items[2]),
+              ],
+            ),
           ),
         ],
       ),
