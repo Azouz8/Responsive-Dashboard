@@ -12,7 +12,15 @@ class FinancialItemModel {
   final TextStyle dateStyle;
   final TextStyle moneyAmountStyle;
 
-  const FinancialItemModel({required this.color, required this.iconBackgroundColor, required this.icon, required this.type, required this.date, required this.moneyAmount, required this.typeStyle, required this.dateStyle, required this.moneyAmountStyle});
-
-
+  const FinancialItemModel({
+    required this.color,
+    required this.iconBackgroundColor,
+    required this.icon,
+    required this.type,
+    required this.date,
+    required this.moneyAmount,
+    required this.typeStyle,
+    required this.dateStyle,
+    required this.moneyAmountStyle,
+  });
 }

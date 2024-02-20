@@ -7,46 +7,58 @@ class FinancialCategory extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: Container(
-        margin: const EdgeInsets.all(8),
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
-        decoration: BoxDecoration(
-            border: Border.all(width: 1, color: const Color(0xffF1F1F1)),
-            color: financialItemModel.color,
-            borderRadius: BorderRadius.circular(12)),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              children: [
-                CircleAvatar(
-                    radius: 25,
-                    backgroundColor: financialItemModel.iconBackgroundColor,
-                    child: financialItemModel.icon),
-                // const Expanded(child: SizedBox()),
-                const Icon(Icons.arrow_forward_ios),
-              ],
-            ),
-            const Expanded(child: SizedBox()),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 8),
-              child: Text(
-                financialItemModel.type,
-                style: financialItemModel.typeStyle,
+      child: IntrinsicHeight(
+        child: Container(
+          margin: const EdgeInsets.all(8),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+          decoration: BoxDecoration(
+              border: Border.all(width: 1, color: const Color(0xffF1F1F1)),
+              color: financialItemModel.color,
+              borderRadius: BorderRadius.circular(12)),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Container(
+                    padding: const EdgeInsets.all(8),
+                    width: MediaQuery.sizeOf(context).width / 30,
+                    decoration: ShapeDecoration(
+                      shape: const CircleBorder(),
+                      color: financialItemModel.iconBackgroundColor,
+                    ),
+                    child: financialItemModel.icon,
+                  ),
+                  const Spacer(),
+                  Icon(
+                    Icons.arrow_forward_ios,
+                    size: MediaQuery.sizeOf(context).width / 60,
+                  ),
+                ],
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 16),
-              child: Text(
-                financialItemModel.date,
-                style: financialItemModel.dateStyle,
+              const SizedBox(
+                height: 32,
               ),
-            ),
-            Text(
-              "\$ ${financialItemModel.moneyAmount}",
-              style: financialItemModel.moneyAmountStyle,
-            ),
-          ],
+              Padding(
+                padding: const EdgeInsets.only(bottom: 8),
+                child: Text(
+                  financialItemModel.type,
+                  style: financialItemModel.typeStyle,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 16),
+                child: Text(
+                  financialItemModel.date,
+                  style: financialItemModel.dateStyle,
+                ),
+              ),
+              Text(
+                "\$ ${financialItemModel.moneyAmount}",
+                style: financialItemModel.moneyAmountStyle,
+              ),
+            ],
+          ),
         ),
       ),
     );

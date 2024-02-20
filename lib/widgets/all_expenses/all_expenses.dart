@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/consts/consts.dart';
+import 'package:responsive_dashboard/constants/consts.dart';
 import 'package:responsive_dashboard/widgets/all_expenses/expenses_header.dart';
 import 'package:responsive_dashboard/widgets/all_expenses/financial_categ.dart';
 
@@ -18,16 +18,15 @@ class AllExpenses extends StatelessWidget {
         color: Colors.white,
       ),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const ExpensesHeader(),
-          Expanded(
-            child: Row(
-              children: [
-                FinancialCategory(financialItemModel: items[0]),
-                FinancialCategory(financialItemModel: items[1]),
-                FinancialCategory(financialItemModel: items[2]),
-              ],
-            ),
+          Row(
+            children: [
+              FinancialCategory(financialItemModel: items[0]),
+              FinancialCategory(financialItemModel: items[1]),
+              FinancialCategory(financialItemModel: items[2]),
+            ],
           ),
         ],
       ),

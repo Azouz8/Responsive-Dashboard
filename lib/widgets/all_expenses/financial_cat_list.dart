@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dashboard/consts/consts.dart';
+import 'package:responsive_dashboard/constants/consts.dart';
 import 'package:responsive_dashboard/widgets/all_expenses/financial_categ.dart';
 
 class FinancialCatList extends StatelessWidget {
