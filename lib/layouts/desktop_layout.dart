@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/widgets/middle_part.dart';
 import 'package:responsive_dashboard/widgets/custom_drawer/custom_drawer.dart';
+import 'package:responsive_dashboard/widgets/last_part.dart';
 
 class DashboardDesktopLayout extends StatelessWidget {
   const DashboardDesktopLayout({super.key});
@@ -14,15 +15,10 @@ class DashboardDesktopLayout extends StatelessWidget {
           flex: 4,
           child: MiddlePart(),
         ),
-        Expanded(
-            flex: 3,
-            child: Container(
-              margin: const EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(16),
-                color: Colors.grey.shade300,
-              ),
-            )),
+        const Expanded(
+          flex: 3,
+          child: LastPart(),
+        ),
       ],
     );
   }
