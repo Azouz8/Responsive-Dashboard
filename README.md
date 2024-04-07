@@ -1,5 +1,5 @@
 # responsive_dashboard
 
-A new Flutter project to learn Responsive/Adaptive UI
+A new Flutter project for Creating Responsive and Adaptive dashboard UI.
 
 
