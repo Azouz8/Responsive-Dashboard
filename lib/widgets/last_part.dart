@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dashboard/widgets/income/income.dart';
 import 'package:responsive_dashboard/widgets/my_card/my_cards_section.dart';
+import 'package:responsive_dashboard/widgets/transaction_history/transaction_history.dart';
 
 class LastPart extends StatelessWidget {
   const LastPart({
@@ -8,13 +10,14 @@ class LastPart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(16),
-        color: const Color(0xffFFFFFF),
+    return const SingleChildScrollView(
+      child: Column(
+        children: [
+          MyCardsSection(),
+          TransactionHistory(),
+          Income(),
+        ],
       ),
-      child: const MyCardsSection(),
     );
   }
 }

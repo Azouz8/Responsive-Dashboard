@@ -40,7 +40,7 @@ class CardDesign extends StatelessWidget {
                         ),
                       ),
                       const Text(
-                        "Syah Bandi",
+                        "Maryem Ehab",
                         style: AppStyles.styleMedium20,
                       ),
                     ],

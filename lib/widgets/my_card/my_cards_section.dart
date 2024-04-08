@@ -25,8 +25,14 @@ class _MyCardsSectionState extends State<MyCardsSection> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return Container(
+      decoration: const BoxDecoration(
+        borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(16), topRight: Radius.circular(16)),
+        color: Color(0xffFFFFFF),
+      ),
       padding: const EdgeInsets.symmetric(horizontal: 24),
+      margin: const EdgeInsets.only(top: 16, left: 16, right: 16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
