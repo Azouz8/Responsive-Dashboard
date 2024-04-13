@@ -13,7 +13,7 @@ class QuickInvoice extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
         color: Colors.white,
       ),
-      margin: const EdgeInsets.only(bottom: 16, top: 8),
+      margin: const EdgeInsets.only(top: 8),
       child: const Padding(
         padding: EdgeInsets.symmetric(horizontal: 28, vertical: 16),
         child: Column(

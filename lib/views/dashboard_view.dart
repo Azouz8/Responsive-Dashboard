@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/layouts/desktop_layout.dart';
+import 'package:responsive_dashboard/layouts/mobile_layout.dart';
+import 'package:responsive_dashboard/layouts/tablet_layout.dart';
 import 'package:responsive_dashboard/widgets/adaptive_layout.dart';
+import 'package:responsive_dashboard/widgets/custom_drawer/custom_drawer.dart';
 
 class DashBoardView extends StatelessWidget {
   const DashBoardView({super.key});
@@ -10,16 +13,21 @@ class DashBoardView extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xfff7f9fa),
       drawerEnableOpenDragGesture: false,
-      // drawer: const Drawer(),
-      appBar: MediaQuery.sizeOf(context).width < 996
+      drawer: MediaQuery.sizeOf(context).width < 864
+          ? Drawer(
+              child: CustomDrawer(),
+            )
+          : null,
+      appBar: MediaQuery.sizeOf(context).width < 864
           ? AppBar(
-              iconTheme: const IconThemeData(color: Colors.white),
-              backgroundColor: Colors.black,
+              iconTheme: const IconThemeData(color: Colors.black),
+              backgroundColor: const Color(0xfff7f9fa),
+              scrolledUnderElevation: 0,
             )
           : null,
       body: AdaptiveLayout(
-        mobileLayout: (context) => const SizedBox(),
-        tabletLayout: (context) => const SizedBox(),
+        mobileLayout: (context) => const DashboardMobileLayout(),
+        tabletLayout: (context) => const DashboardTabletLayout(),
         desktopLayout: (context) => const DashboardDesktopLayout(),
       ),
     );

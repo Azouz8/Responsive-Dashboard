@@ -37,7 +37,7 @@ class CustomDrawer extends StatelessWidget {
         slivers: [
           SliverToBoxAdapter(
               child: Container(
-            margin: const EdgeInsets.only(left: 16),
+            margin: const EdgeInsets.only(left: 16, top: 32),
             child: UserInfo(
               userInfo: userInfo,
             ),

@@ -22,7 +22,6 @@ class FinancialCategory extends StatelessWidget {
                 children: [
                   Container(
                     padding: const EdgeInsets.all(8),
-                    width: MediaQuery.sizeOf(context).width / 30,
                     decoration: ShapeDecoration(
                       shape: const CircleBorder(),
                       color: financialItemModel.iconBackgroundColor,

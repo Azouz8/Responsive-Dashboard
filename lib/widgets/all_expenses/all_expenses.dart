@@ -12,7 +12,7 @@ class AllExpenses extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(20),
-      margin: const EdgeInsets.only(bottom: 8, top: 16),
+      margin: const EdgeInsets.only(bottom: 8, top: 0),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
         color: Colors.white,

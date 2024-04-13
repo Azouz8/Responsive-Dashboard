@@ -10,13 +10,16 @@ class LastPart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SingleChildScrollView(
-      child: Column(
-        children: [
-          MyCardsSection(),
-          TransactionHistory(),
-          Income(),
-        ],
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: 16),
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            MyCardsSection(),
+            TransactionHistory(),
+            Income(),
+          ],
+        ),
       ),
     );
   }

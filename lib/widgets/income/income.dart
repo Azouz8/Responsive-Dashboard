@@ -13,20 +13,17 @@ class Income extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
         color: const Color(0xffFFFFFF),
       ),
-      margin: const EdgeInsets.all(16),
-      height: MediaQuery.of(context).size.height * 0.3,
+      margin: const EdgeInsets.symmetric(vertical: 16),
       child: const Column(
         children: [
           IncomeHeader(),
-          Expanded(
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Expanded(child: IncomeChart()),
-                Expanded(child: IncomeItemListView()),
-              ],
-            ),
-          )
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Expanded(child: IncomeChart()),
+              Expanded(child: IncomeItemListView()),
+            ],
+          ),
         ],
       ),
     );

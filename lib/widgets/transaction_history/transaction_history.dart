@@ -11,7 +11,7 @@ class TransactionHistory extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
-      margin: const EdgeInsets.only(left: 16, right: 16),
+      // margin: const EdgeInsets.only(left: 16, right: 16),
       decoration: const BoxDecoration(
         borderRadius: BorderRadius.only(
             bottomLeft: Radius.circular(16), bottomRight: Radius.circular(16)),

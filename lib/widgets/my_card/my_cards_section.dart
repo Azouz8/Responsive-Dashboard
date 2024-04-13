@@ -32,7 +32,7 @@ class _MyCardsSectionState extends State<MyCardsSection> {
         color: Color(0xffFFFFFF),
       ),
       padding: const EdgeInsets.symmetric(horizontal: 24),
-      margin: const EdgeInsets.only(top: 16, left: 16, right: 16),
+      // margin: const EdgeInsets.only(left: 16, right: 16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
