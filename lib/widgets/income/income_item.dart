@@ -7,29 +7,32 @@ class IncomeItem extends StatelessWidget {
   final IncomeItemModel incomeItemModel;
   @override
   Widget build(BuildContext context) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Container(
-          margin: const EdgeInsets.all(8),
-          width: 12,
-          height: 12,
-          decoration: ShapeDecoration(
-              shape: const OvalBorder(), color: incomeItemModel.color),
-        ),
-        Text(
-          incomeItemModel.details,
-          style: AppStyles.styleRegular16,
-        ),
-        const Spacer(),
-        Text(
-          incomeItemModel.persentage,
-          style: AppStyles.styleMedium16,
-        ),
-        const SizedBox(
-          width: 24,
-        )
-      ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 5),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Container(
+            margin: const EdgeInsets.all(8),
+            width: 12,
+            height: 12,
+            decoration: ShapeDecoration(
+                shape: const OvalBorder(), color: incomeItemModel.color),
+          ),
+          Text(
+            incomeItemModel.details,
+            style: AppStyles.styleRegular16,
+          ),
+          const Spacer(),
+          Text(
+            incomeItemModel.persentage,
+            style: AppStyles.styleMedium16,
+          ),
+          const SizedBox(
+            width: 24,
+          ),
+        ],
+      ),
     );
   }
 }

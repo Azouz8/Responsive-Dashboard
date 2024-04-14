@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dashboard/constants/break_points.dart';
 
 class AdaptiveLayout extends StatelessWidget {
   const AdaptiveLayout(
@@ -11,9 +12,9 @@ class AdaptiveLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
-        if (constraints.maxWidth >= 1200) {
+        if (constraints.maxWidth >= SizeConfig.desktopSize) {
           return desktopLayout(context);
-        } else if (constraints.maxWidth >= 800) {
+        } else if (constraints.maxWidth >= SizeConfig.tabletSize) {
           return tabletLayout(context);
         } else {
           return mobileLayout(context);

@@ -14,7 +14,7 @@ class _IncomeChartState extends State<IncomeChart> {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 2,
+      aspectRatio: 1.8,
       child: PieChart(
         getChartData(),
       ),
@@ -46,7 +46,7 @@ class _IncomeChartState extends State<IncomeChart> {
               radius: activeIndex == 3 ? 40 : 30),
         ],
         sectionsSpace: 0,
-        centerSpaceRadius: 30,
+        // centerSpaceRadius: 30,
         pieTouchData: PieTouchData(
           enabled: true,
           touchCallback: (p0, p1) {

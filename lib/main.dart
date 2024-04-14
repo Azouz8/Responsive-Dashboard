@@ -3,9 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/views/dashboard_view.dart';
 
 void main() => runApp(
-      DevicePreview(
-        builder: (context) => const ResponsiveDashBoard(), // Wrap your app
-      ),
+      const ResponsiveDashBoard(),
     );
 
 class ResponsiveDashBoard extends StatelessWidget {

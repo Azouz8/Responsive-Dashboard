@@ -31,9 +31,9 @@ class FinancialCategory extends StatelessWidget {
                   const SizedBox(
                     width: 101,
                   ),
-                  Icon(
+                  const Icon(
                     Icons.arrow_forward_ios,
-                    size: MediaQuery.sizeOf(context).width / 60,
+                    size: 20,
                   ),
                 ],
               ),

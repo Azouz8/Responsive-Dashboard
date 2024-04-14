@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dashboard/constants/break_points.dart';
 import 'package:responsive_dashboard/layouts/desktop_layout.dart';
 import 'package:responsive_dashboard/layouts/mobile_layout.dart';
 import 'package:responsive_dashboard/layouts/tablet_layout.dart';
@@ -13,12 +14,12 @@ class DashBoardView extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xfff7f9fa),
       drawerEnableOpenDragGesture: false,
-      drawer: MediaQuery.sizeOf(context).width < 864
+      drawer: MediaQuery.sizeOf(context).width < SizeConfig.tabletSize
           ? Drawer(
               child: CustomDrawer(),
             )
           : null,
-      appBar: MediaQuery.sizeOf(context).width < 864
+      appBar: MediaQuery.sizeOf(context).width < SizeConfig.desktopSize
           ? AppBar(
               iconTheme: const IconThemeData(color: Colors.black),
               backgroundColor: const Color(0xfff7f9fa),
