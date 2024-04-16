@@ -11,7 +11,7 @@ class IncomeItemListView extends StatelessWidget {
         color: Color(0xFF4DB7F2), details: "Design product", persentage: "25%"),
     IncomeItemModel(
         color: Color(0xFF064060),
-        details: "product royality",
+        details: "Product royality",
         persentage: "20%"),
     IncomeItemModel(
         color: Color(0xFFE2DECD), details: "Other", persentage: "22%"),
