@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/views/dashboard_view.dart';
+
 // import 'package:device_preview/device_preview.dart';
 
 void main() => runApp(
