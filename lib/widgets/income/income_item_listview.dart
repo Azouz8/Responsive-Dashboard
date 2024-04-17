@@ -19,6 +19,7 @@ class IncomeItemListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      physics: const NeverScrollableScrollPhysics(),
       itemBuilder: (context, index) =>
           IncomeItem(incomeItemModel: items[index]),
       itemCount: items.length,

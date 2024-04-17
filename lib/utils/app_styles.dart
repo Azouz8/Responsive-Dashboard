@@ -96,14 +96,14 @@ abstract class AppStyles {
 double getResponsiveFontSize(BuildContext context, {required double fontSize}) {
   double scaleFactor = getScaleFactor(context);
   double responsiveFontSize = fontSize * scaleFactor;
-  if (responsiveFontSize >= fontSize * 0.8 &&
+  if (responsiveFontSize >= fontSize * 0.58 &&
       responsiveFontSize <= fontSize * 1.2) {
     return responsiveFontSize;
   } else if (responsiveFontSize > fontSize * 1.2) {
     responsiveFontSize = fontSize * 1.2;
     return responsiveFontSize;
   } else {
-    responsiveFontSize = fontSize * 0.8;
+    responsiveFontSize = fontSize * 0.58;
     return responsiveFontSize;
   }
   // responsiveFontSize.clamp(fontSize*0.8, fontSize*1.2);
@@ -121,6 +121,6 @@ double getScaleFactor(context) {
   } else if (width >= SizeConfig.tabletSize) {
     return width / 1200;
   } else {
-    return width / 900;
+    return width / 1500;
   }
 }
