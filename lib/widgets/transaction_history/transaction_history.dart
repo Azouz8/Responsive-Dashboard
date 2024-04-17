@@ -31,7 +31,7 @@ class TransactionHistory extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 20),
             child: Text(
               "13 April 2024",
-              style: AppStyles.styleRegular14
+              style: AppStyles.styleRegular14(context)
                   .copyWith(fontWeight: FontWeight.w600),
             ),
           ),

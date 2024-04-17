@@ -21,12 +21,12 @@ class IncomeItem extends StatelessWidget {
           ),
           Text(
             incomeItemModel.details,
-            style: AppStyles.styleRegular16,
+            style: AppStyles.styleRegular16(context),
           ),
           const Spacer(),
           Text(
             incomeItemModel.persentage,
-            style: AppStyles.styleMedium16,
+            style: AppStyles.styleMedium16(context),
           ),
           const SizedBox(
             width: 24,

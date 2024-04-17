@@ -39,12 +39,12 @@ class _MyCardsSectionState extends State<MyCardsSection> {
           const SizedBox(
             height: 16,
           ),
-          const Row(
+          Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Text(
                 "My Card",
-                style: AppStyles.styleSemiBold20,
+                style: AppStyles.styleSemiBold20(context),
               ),
             ],
           ),

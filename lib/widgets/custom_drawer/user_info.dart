@@ -22,11 +22,11 @@ class UserInfo extends StatelessWidget {
             leading: userInfo.image,
             title: Text(
               userInfo.name,
-              style: AppStyles.styleSemiBold16,
+              style: AppStyles.styleSemiBold16(context),
             ),
             subtitle: Text(
               userInfo.email,
-              style: AppStyles.styleRegular12,
+              style: AppStyles.styleRegular12(context),
             ),
           ),
         ),

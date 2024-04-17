@@ -9,16 +9,16 @@ class ExpensesHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.symmetric(horizontal: 8),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 8),
       child: Row(
         children: [
           Text(
             "All Expenses",
-            style: AppStyles.styleSemiBold20,
+            style: AppStyles.styleSemiBold20(context),
           ),
-          Expanded(child: SizedBox()),
-          RangeOptions(),
+          const Expanded(child: SizedBox()),
+          const RangeOptions(),
         ],
       ),
     );

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/models/financial_item_model.dart';
+import 'package:responsive_dashboard/utils/app_styles.dart';
 
 class FinancialCategory extends StatelessWidget {
   const FinancialCategory({super.key, required this.financialItemModel});
@@ -44,19 +45,28 @@ class FinancialCategory extends StatelessWidget {
                 padding: const EdgeInsets.only(bottom: 8),
                 child: Text(
                   financialItemModel.type,
-                  style: financialItemModel.typeStyle,
+                  style: financialItemModel.color == const Color(0xff4eb7f2)
+                      ? AppStyles.styleSemiBold18(context)
+                      : AppStyles.styleSemiBold18(context)
+                          .copyWith(color: const Color(0xff064060)),
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.only(bottom: 16),
                 child: Text(
                   financialItemModel.date,
-                  style: financialItemModel.dateStyle,
+                  style: financialItemModel.color == const Color(0xff4eb7f2)
+                      ? AppStyles.styleRegular14(context)
+                          .copyWith(color: Colors.white)
+                      : AppStyles.styleRegular14(context),
                 ),
               ),
               Text(
                 "\$ ${financialItemModel.moneyAmount}",
-                style: financialItemModel.moneyAmountStyle,
+                style: financialItemModel.color == const Color(0xff4eb7f2)
+                    ? AppStyles.styleSemiBold24(context)
+                        .copyWith(color: Colors.white)
+                    : AppStyles.styleSemiBold24(context),
               ),
             ],
           ),

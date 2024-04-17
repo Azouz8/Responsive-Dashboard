@@ -9,16 +9,16 @@ class IncomeHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
       child: Row(
         children: [
           Text(
             "Income",
-            style: AppStyles.styleSemiBold20,
+            style: AppStyles.styleSemiBold20(context),
           ),
-          Expanded(child: SizedBox()),
-          RangeOptions(),
+          const Expanded(child: SizedBox()),
+          const RangeOptions(),
         ],
       ),
     );

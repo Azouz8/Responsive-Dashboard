@@ -12,7 +12,7 @@ class Income extends StatelessWidget {
         borderRadius: BorderRadius.circular(16),
         color: const Color(0xffFFFFFF),
       ),
-      padding: const EdgeInsets.symmetric(vertical: 8),
+      padding: const EdgeInsets.only(top: 8),
       margin: const EdgeInsets.symmetric(vertical: 16),
       child: const Column(
         children: [

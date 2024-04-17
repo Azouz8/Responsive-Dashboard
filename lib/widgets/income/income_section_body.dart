@@ -37,13 +37,19 @@ class _IncomeSectionBodyState extends State<IncomeSectionBody> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Expanded(
+                  flex: 2,
                   child: IncomeChart(
-                data: chartData(),
-              )),
-              const Expanded(child: IncomeItemListView()),
+                    data: chartData(),
+                  )),
+              const Expanded(
+                flex: 3,
+                child: IncomeItemListView(),
+              ),
             ],
           );
   }
+
+  int activeIndex = -1;
 
   PieChartData chartData() {
     return PieChartData(

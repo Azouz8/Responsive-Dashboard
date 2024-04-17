@@ -14,12 +14,12 @@ class TransactionHistoryHeader extends StatelessWidget {
         Text(
           "Transaction History",
           style:
-              AppStyles.styleSemiBold20.copyWith(fontWeight: FontWeight.w700),
+              AppStyles.styleSemiBold20(context).copyWith(fontWeight: FontWeight.w700),
         ),
         Text(
           "See all",
           style:
-              AppStyles.styleMedium16.copyWith(color: const Color(0xff4eb7f2)),
+              AppStyles.styleMedium16(context).copyWith(color: const Color(0xff4eb7f2)),
         ),
       ],
     );

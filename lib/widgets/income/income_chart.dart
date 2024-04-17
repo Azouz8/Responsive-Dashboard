@@ -16,4 +16,4 @@ class IncomeChart extends StatelessWidget {
   }
 }
 
-int activeIndex = -1;
+
