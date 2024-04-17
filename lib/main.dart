@@ -4,6 +4,7 @@ import 'package:responsive_dashboard/views/dashboard_view.dart';
 
 void main() => runApp(
       DevicePreview(
+        enabled: true,
         builder: (context) => const ResponsiveDashBoard(),
       ),
     );

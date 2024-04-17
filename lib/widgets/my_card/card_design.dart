@@ -51,7 +51,7 @@ class CardDesign extends StatelessWidget {
             ),
             const Spacer(),
             Padding(
-              padding: const EdgeInsets.only(bottom: 32, right: 32),
+              padding: const EdgeInsets.only(bottom: 24, right: 32),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
